@@ -9,8 +9,11 @@ cl_int clGetPlatformIDs( cl_uint num_entries,
                          cl_uint *num_platforms)
 
 OpenCL 使用 cl_platform_id 表示平台，通過 clGetPlatformIDs
-獲取可使用的平台數組。當平台數未知，第一次調用 clGetPlatformIDs 獲取平台個數，第二次調用 clGetPlatformIDs 獲取平台對象。
+獲取可使用的平台數組。當平台數未知，第一次調用 clGetPlatformIDs 獲取平台個數，
+第二次調用 clGetPlatformIDs 獲取平台對象。
 
+
+參數說明：
 - num_entries [IN] ：要獲取的平台數量，如果platforms非空，則num_entries不能為0。
 - platforms [OUT] ：返回獲取的平台對像數組。
 -num_platforms [OUT] ：用於查詢返回可用的平台數目，num_platforms可設為NULL 忽略。
