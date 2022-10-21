@@ -16,7 +16,7 @@ OpenCL 使用 cl_platform_id 表示平台，通過 clGetPlatformIDs
 參數說明：
 - num_entries [IN] ：要獲取的平台數量，如果platforms非空，則num_entries不能為0。
 - platforms [OUT] ：返回獲取的平台對像數組。
--num_platforms [OUT] ：用於查詢返回可用的平台數目，num_platforms可設為NULL 忽略。
+-num_platforms [OUT] ：用於查詢返回可用的平台數目，num_platforms可設為NULL 忽略
 - Return ：正常執行返回CL_SUCCESS
 
 ```
