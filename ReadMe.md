@@ -1,7 +1,7 @@
 Opencl_API
 ======
 
-### cl_int clGetPlatformIDs
+### **cl_int clGetPlatformIDs**
 
 ```
 cl_int clGetPlatformIDs( cl_uint num_entries, 
