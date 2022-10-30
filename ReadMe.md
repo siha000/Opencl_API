@@ -1,7 +1,38 @@
-Opencl_API
+OpenCL
 ======
 
-### **cl_int clGetPlatformIDs**
+
+### 安裝Intel OpenCL
+
++ 安裝完成後，所在目錄默認路徑為：C:\Program Files (x86)\IntelSWTools\system_studio_2020\OpenCL\sdk
+
++ 在C:\Program Files (x86)\IntelSWTools\system_studio_2020\OpenCL\sdk\include裡面資料夾複製到Mingw的include
+
++ C:\Program Files (x86)\IntelSWTools\system_studio_2020\OpenCL\sdk\lib\x86裡面資料複製到Mingw的lib
+
++ 執行時輸入g++ -g 檔案名稱.cpp -lOpenCL -o 檔案名稱
+
+### OpenCL API執行流程
+
+```
+clGetPlatformIDs第一次調用獲取平台個數，第二次調用 clGetPlatformIDs 獲取平台對象。
+
+clGetDeviceIDs第一次調用獲取設備個數，第二次調用 clGetDeviceIDs 獲取設備對象。
+
+clCreateContext -> clCreateCommandQueueWithProperties -> clCreateBuffer -> 
+
+clEnqueueReadBuffer -> clCreateProgramWithSource -> clBuildProgram ->
+
+clCreateKernel -> clSetKernelArg -> clEnqueueNDRangeKernel -> clEnqueueWriteBuffer
+
+-> 釋放所有資源
+
+```
+
+OpenCL_API
+======
+
+### cl_int clGetPlatformIDs
 
 ```
 cl_int clGetPlatformIDs( cl_uint num_entries, 
