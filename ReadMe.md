@@ -1,7 +1,6 @@
 OpenCL
 ======
 
-
 ### 安裝Intel OpenCL
 
 + 安裝完成後，所在目錄默認路徑為：C:\Program Files (x86)\IntelSWTools\system_studio_2020\OpenCL\sdk
